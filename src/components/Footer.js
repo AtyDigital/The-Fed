@@ -175,7 +175,7 @@ const Footer = ({ homepage, tweet, items, ...props }) => {
                             />
                         </g>
                     </IMRDLogo>
-                    IMRD
+                    $BRRR
                 </>
             ),
             href: homepage,
