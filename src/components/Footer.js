@@ -3,7 +3,7 @@ import { node, shape, string, arrayOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Container as BSContainer } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle, faShareAlt } from '@fortawesome/pro-solid-svg-icons';
+import { faPlusCircle, faShareAlt } from '@fortawesome/free-solid-svg-icons';
 import {
     faBitcoin,
     faTwitter,
