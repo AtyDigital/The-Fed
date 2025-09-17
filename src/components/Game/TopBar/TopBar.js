@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Navbar } from 'react-bootstrap';
 import {
-    faVolume,
-    faVolumeMute,
+    faVolumeUp,
+    faVolumeXmark,
     faQuestionCircle,
     faTimesCircle
 } from '@fortawesome/free-solid-svg-icons';
@@ -80,7 +80,7 @@ const TopBar = ({
                     {!isMobile && (
                         <NavbarButton
                             label={mute ? 'Enable sound' : 'Mute sound'}
-                            icon={mute ? faVolumeMute : faVolume}
+                            icon={mute ? faVolumeXmark : faVolumeUp}
                             onClick={handleVolume}
                         />
                     )}
