@@ -276,6 +276,18 @@ const items = [
             icon: faDiscord,
             color: '#7289DA',
         },
+                {
+            title: 'Patreon',
+            href: '',
+            icon: faPatreon,
+            color: '#f96854',
+        },
+        {
+            title: 'GitHub',
+            href: '',
+            icon: faGithub,
+            color: black,
+        },
     ],
 ];
 
