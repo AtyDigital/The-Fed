@@ -25,7 +25,7 @@ const Loading = ({ isLoading, pastDelay, error }) => {
                         <Col md={{ span: 6, offset: 3 }} className="py-md-5">
                             {renderLoading && (
                                 <FontAwesomeIcon
-                                    icon={faSpinnerThird}
+                                    icon={faSpinner}
                                     size="5x"
                                     spin
                                     className="my-5"
