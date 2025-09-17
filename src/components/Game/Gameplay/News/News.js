@@ -6,7 +6,7 @@ import { Media, ListGroup } from 'react-bootstrap';
 import {
     faNewspaper,
     faQuestionCircle
-} from '@fortawesome/pro-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../Card';
