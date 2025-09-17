@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faQuestionCircle,
     faArrowLeft
-} from '@fortawesome/pro-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 import WaveBG from '../WaveBG';
 import Footer from '../Footer';
 import styles from './NotFound.module.scss';
