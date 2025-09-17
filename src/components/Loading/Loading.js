@@ -3,8 +3,8 @@ import { bool, shape, string } from 'prop-types';
 import classNames from 'classnames';
 import { Container, Row, Col, Alert, Media } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinnerThird } from '@fortawesome/pro-regular-svg-icons';
-import { faExclamationTriangle } from '@fortawesome/pro-solid-svg-icons';
+import { faSpinnerThird } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import WaveBG from '../WaveBG';
 import styles from './Loading.module.scss';
 
