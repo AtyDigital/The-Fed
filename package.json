@@ -2,7 +2,7 @@
     "name": "the-fed",
     "version": "1.0.0",
     "description": "A simple game about central banking",
-    "homepage": "https://thefed.app",
+    "homepage": ".",
     "repository": "github:memetic-institute/The-Fed.git",
     "author": "IMRD <hi@memetic.institute> (https://memetic.institute)",
     "license": "MIT",
