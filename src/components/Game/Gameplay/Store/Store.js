@@ -3,7 +3,7 @@ import { number, arrayOf, shape } from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
-import { faShoppingCart } from '@fortawesome/pro-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Item from './Item';
 import Card from '../Card';
