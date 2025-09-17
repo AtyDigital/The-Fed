@@ -11,7 +11,7 @@ import {
     faVolumeMute,
     faQuestionCircle,
     faTimesCircle
-} from '@fortawesome/pro-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 import { endGame } from '../../../state/modules/game';
 import { toggleVolume } from '../../../state/modules/preferences';
 import { renderModal } from '../../../state/modules/modal';
