@@ -227,12 +227,12 @@ Footer.propTypes = {
     ),
 };
 
-const homepage = 'https://memetic.institute';
+const homepage = 'https://dexscreener.com/solana/6wdxyu21jeqzsqwg85dxyhczdvysxxupnsut1etqmoon';
 const tweet = {
-    url: 'https://thefed.app',
+    url: 'https://dexscreener.com/solana/6wdxyu21jeqzsqwg85dxyhczdvysxxupnsut1etqmoon',
     text:
         'Play as Jerome Powell and see if you can print faster at the @federalreserve:',
-    handle: 'memetic_insti2t',
+    handle: 'moneyprintergo',
     hashtags: ['brrr'],
 };
 const items = [
@@ -266,27 +266,15 @@ const items = [
         {
             title: 'Facebook',
             href:
-                'https://fb.me/institute.for.memetic.research.and.development',
+                '',
             icon: faFacebook,
             color: '#4267B2',
         },
         {
             title: 'Discord',
-            href: 'https://discord.gg/mUxVBb4',
+            href: '',
             icon: faDiscord,
             color: '#7289DA',
-        },
-        {
-            title: 'Patreon',
-            href: 'https://www.patreon.com/memeticinstitute',
-            icon: faPatreon,
-            color: '#f96854',
-        },
-        {
-            title: 'GitHub',
-            href: 'https://github.com/memetic-institute/The-Fed',
-            icon: faGithub,
-            color: black,
         },
     ],
 ];
