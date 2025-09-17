@@ -237,7 +237,7 @@ const tweet = {
 };
 const items = [
     {
-        children: 'More Memes',
+        children: 'Buy $BRRR',
         href: `${homepage}/projects`,
         icon: faPlusCircle,
         color: '#700fdd',
