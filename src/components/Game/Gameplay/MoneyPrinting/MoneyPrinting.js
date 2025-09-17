@@ -3,7 +3,7 @@ import { number, arrayOf, shape } from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { Media } from 'react-bootstrap';
-import { faPrint } from '@fortawesome/pro-solid-svg-icons';
+import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import commatize from '../../../../commatizeNumber';
 import PrintButton from './PrintButton';
