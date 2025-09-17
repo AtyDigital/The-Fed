@@ -12,7 +12,7 @@
 
 ### [🕹 Live Game](https://thefed.app)
 
-### [🛠 Development](docs/Development.md) 
+### [🛠 Development](docs/Development.md)   
 
 ### ⚖️ License
 
