@@ -6,10 +6,12 @@ import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import game from './game';
 import modal from './modal';
 import preferences from './preferences';
+import sessions from './sessions';
 
 const persistReducers = {
     game,
-    preferences
+    preferences,
+    sessions
 };
 
 const configuredPersistReducers = Object.keys(persistReducers).reduce(

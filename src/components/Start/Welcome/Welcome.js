@@ -1,11 +1,15 @@
 import React from 'react';
-import { shape, string, func } from 'prop-types';
+import { shape, string, func, number } from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { startGame } from '../../../state/modules/game';
+import {
+    sessionsRemaining,
+    MAX_SESSIONS_PER_DAY
+} from '../../../state/modules/sessions';
 import { ReactComponent as Signature } from './trump-signature.svg';
 
-const Welcome = ({ name, handleStartGame }) => (
+const Welcome = ({ name, remaining, handleStartGame }) => (
     <>
         <p className="lead">Welcome, Chairman {name.last}!</p>
         <hr />
@@ -27,18 +31,31 @@ const Welcome = ({ name, handleStartGame }) => (
             <br />
             <Signature height="90px" />
         </p>
-        <Button
-            size="lg"
-            variant="primary"
-            onClick={handleStartGame}
-            className="mt-3"
-        >
-            I accept
-        </Button>
+        {remaining > 0 ? (
+            <>
+                <Button
+                    size="lg"
+                    variant="primary"
+                    onClick={handleStartGame}
+                    className="mt-3"
+                >
+                    I accept
+                </Button>
+                <p className="text-muted mt-3 mb-0" style={{ fontSize: '0.8rem' }}>
+                    {remaining} of {MAX_SESSIONS_PER_DAY} terms left today
+                </p>
+            </>
+        ) : (
+            <p className="mt-3 mb-0">
+                You have served all {MAX_SESSIONS_PER_DAY} terms today. The
+                Board reconvenes tomorrow.
+            </p>
+        )}
     </>
 );
 
 Welcome.propTypes = {
+    remaining: number.isRequired,
     name: shape({
         first: string.isRequired,
         last: string.isRequired
@@ -53,11 +70,10 @@ Welcome.defaultProps = {
     }
 };
 
-const mapStateToProps = ({
-    game: {
-        player: { name }
-    }
-}) => ({ name });
+const mapStateToProps = (state) => ({
+    name: state.game.player.name,
+    remaining: sessionsRemaining(state)
+});
 
 const mapDispatchToProps = {
     handleStartGame: startGame

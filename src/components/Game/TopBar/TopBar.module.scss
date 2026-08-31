@@ -17,3 +17,11 @@
 .toggle {
     z-index: 100;
 }
+
+.clock {
+    font-family: 'VT323', monospace;
+    font-size: 1.35rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}

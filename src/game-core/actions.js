@@ -8,6 +8,7 @@ export const END_GAME = 'thefed/game/END_GAME';
 export const INCREMENT_TIMER = 'thefed/game/INCREMENT_TIMER';
 export const PRINT_MONEY = 'thefed/game/PRINT_MONEY';
 export const PURCHASE_PRODUCT = 'thefed/game/PURCHASE_PRODUCT';
+export const CLOSE_SESSION = 'thefed/game/CLOSE_SESSION';
 
 /** Actions a replay log is allowed to contain. Anything else is rejected. */
 export const ECONOMIC_ACTIONS = [
@@ -26,3 +27,6 @@ export const purchaseProduct = (productName) => ({
     type: PURCHASE_PRODUCT,
     productName
 });
+
+/** Ends play but keeps the final state, so a summary can be shown. */
+export const closeSession = (reason) => ({ type: CLOSE_SESSION, reason });

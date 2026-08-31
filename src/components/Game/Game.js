@@ -6,11 +6,13 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import TopBar from './TopBar';
 import Gameplay from './Gameplay';
+import SessionSummary from './SessionSummary';
 import Footer from '../Footer';
 import styles from './Game.module.scss';
 import YouTubeAudio from '../YouTubeAudio';
+import { isSessionOver } from '../../game-core';
 
-const Game = ({ active }) => {
+const Game = ({ active, over }) => {
     if (!active) return <Redirect to="/apply" />;
     return (
         <div
@@ -25,7 +27,7 @@ const Game = ({ active }) => {
                 role="main"
                 className={classNames('h-100', active && 'bg-secondary')}
             >
-                <Gameplay />
+                {over ? <SessionSummary /> : <Gameplay />}
             </div>
             <Footer />
             {!isMobile && (
@@ -37,10 +39,12 @@ const Game = ({ active }) => {
 
 Game.propTypes = {
     active: bool.isRequired,
+    over: bool.isRequired,
 };
 
-const mapStateToProps = ({ game: { active } }) => ({
-    active,
+const mapStateToProps = ({ game }) => ({
+    active: game.active,
+    over: isSessionOver(game),
 });
 
 export default connect(mapStateToProps)(Game);

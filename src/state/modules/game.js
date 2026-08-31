@@ -1,5 +1,6 @@
 import uuid from 'uuid/v4';
 import { push } from 'connected-react-router';
+import { recordSession } from './sessions';
 import ciaUpdate from './news/ciaUpdate';
 import trumpTweet from './news/trumpTweet';
 import {
@@ -99,8 +100,11 @@ export default (state = initialState, action = {}) => {
                 }
             };
         case START_GAME:
+            // Every session starts from a clean slate. Only the player's
+            // application survives, since they filled it in once.
             return {
-                ...state,
+                ...createInitialState(),
+                player: state.player,
                 id: uuid(),
                 active: true
             };
@@ -118,6 +122,7 @@ export const setPlayer = (player) => ({
 });
 
 export const startGame = () => (dispatch) => {
+    dispatch(recordSession());
     dispatch({ type: START_GAME });
     dispatch(push('/'));
 };
@@ -127,5 +132,6 @@ export const endGame = () => ({ type: END_GAME });
 export {
     incrementTimer,
     printMoney,
-    purchaseProduct
+    purchaseProduct,
+    closeSession
 } from '../../game-core';

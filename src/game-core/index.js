@@ -10,7 +10,7 @@
  * a rate, the growth factor — means previously recorded logs no longer replay
  * to the same score, so bump it whenever the economy changes.
  */
-export const CORE_VERSION = 1;
+export const CORE_VERSION = 2;
 
 export { ITEMS, PRICE_GROWTH } from './items';
 export {
@@ -20,10 +20,23 @@ export {
     INCREMENT_TIMER,
     PRINT_MONEY,
     PURCHASE_PRODUCT,
+    CLOSE_SESSION,
     ECONOMIC_ACTIONS,
     isEconomicAction,
     incrementTimer,
     printMoney,
-    purchaseProduct
+    purchaseProduct,
+    closeSession
 } from './actions';
 export { createInitialState, reducer, applyLog } from './reducer';
+export {
+    SESSION_SECONDS,
+    IDLE_SECONDS,
+    END_DURATION,
+    END_IDLE,
+    END_RESIGNED,
+    END_REASONS,
+    isSessionOver,
+    secondsRemaining,
+    idleSecondsRemaining
+} from './session';
