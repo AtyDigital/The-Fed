@@ -26,7 +26,7 @@ const tweets = ({ name: { first: firstName, last: lastName } }) => [
         text: `If anyone is looking for a Fed Chair, I would strongly suggest that you don't retain the services of ${firstName} ${lastName}!`,
         time: 70,
         lessThan: {
-            totalMoney: 10000
+            totalPrinted: 10000
         }
     },
     {

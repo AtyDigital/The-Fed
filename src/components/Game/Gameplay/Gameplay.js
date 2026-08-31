@@ -15,14 +15,14 @@ const h100 = 'h-100';
 
 const Gameplay = ({
     money,
-    totalMoney,
+    totalPrinted,
     showModal,
     tutorial,
     handleTimer,
     handleRenderModal,
 }) => {
     const [openModalIntro, setOpenModalIntro] = useState(
-        tutorial && money === 0 && money === totalMoney
+        tutorial && totalPrinted === 0
     );
     useEffect(() => {
         if (openModalIntro)
@@ -81,7 +81,7 @@ const Gameplay = ({
 
 Gameplay.propTypes = {
     money: number.isRequired,
-    totalMoney: number.isRequired,
+    totalPrinted: number.isRequired,
     showModal: bool.isRequired,
     tutorial: bool.isRequired,
     handleTimer: func.isRequired,
@@ -89,13 +89,13 @@ Gameplay.propTypes = {
 };
 
 const mapStateToProps = ({
-    game: { money, totalMoney },
+    game: { money, totalPrinted },
     modal: { show },
     preferences: { tutorial },
 }) => ({
     showModal: show,
     money,
-    totalMoney,
+    totalPrinted,
     tutorial,
 });
 
