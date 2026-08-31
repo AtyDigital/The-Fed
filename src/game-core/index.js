@@ -10,7 +10,7 @@
  * a rate, the growth factor — means previously recorded logs no longer replay
  * to the same score, so bump it whenever the economy changes.
  */
-export const CORE_VERSION = 2;
+export { CORE_VERSION } from './version';
 
 export { ITEMS, PRICE_GROWTH } from './items';
 export {
@@ -40,3 +40,13 @@ export {
     secondsRemaining,
     idleSecondsRemaining
 } from './session';
+export {
+    verifyLog,
+    REJECTIONS,
+    ACTION_PRINT,
+    ACTION_BUY,
+    MAX_ACTIONS,
+    MAX_ACTIONS_PER_TICK,
+    CLOCK_DRIFT_SECONDS
+} from './verify';
+export { createRecorder } from './recorder';
