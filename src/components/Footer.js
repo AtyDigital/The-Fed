@@ -8,13 +8,12 @@ import {
     faChartLine,
     faMoneyBillWave,
 } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const white = '#FFF';
 const black = '#000';
 const grey = '#AAA';
 const brandColor = '#498200';
-const twitterColor = '#1DA1F2';
 
 const flexCenter = css`
     display: flex;
@@ -114,10 +113,10 @@ const SocialLink = styled(ExternalLink)`
     display: inline-block;
 `;
 
-const twitterUrl = 'https://twitter.com';
+const xUrl = 'https://x.com';
 const twitterIntent = ({ url, handle, text, hashtags }) =>
     encodeURI(
-        `${twitterUrl}/intent/tweet?url=${url}&via=${handle}&text=${text}&hashtags=${hashtags.map(
+        `${xUrl}/intent/tweet?url=${url}&via=${handle}&text=${text}&hashtags=${hashtags.map(
             (hashtag) => `#${hashtag}`
         )}`
     );
@@ -179,7 +178,6 @@ Footer.propTypes = {
 const homepage = 'https://printergobrrr.money';
 const chartUrl =
     'https://dexscreener.com/solana/6wdxyu21jeqzsqwg85dxyhczdvysxxupnsut1etqmoon';
-const repoUrl = 'https://github.com/AtyDigital/The-Fed';
 
 const tweet = {
     url: 'https://game.printergobrrr.money',
@@ -201,20 +199,14 @@ const items = [
         className: 'share-twitter',
         href: twitterIntent(tweet),
         icon: faShareAlt,
-        color: twitterColor,
+        color: black,
         isTwitterIntent: true,
     },
     [
         {
-            title: 'Twitter',
-            href: `${twitterUrl}/${tweet.handle}`,
-            icon: faTwitter,
-            color: twitterColor,
-        },
-        {
-            title: 'GitHub',
-            href: repoUrl,
-            icon: faGithub,
+            title: 'X',
+            href: `${xUrl}/${tweet.handle}`,
+            icon: faXTwitter,
             color: black,
         },
     ],
